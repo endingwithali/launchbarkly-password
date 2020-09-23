@@ -1,11 +1,12 @@
 {
   "name": "launchbarkly-password",
   "version": "1.0.0",
-  "description": "",
+  "description": "Implementation of server to checking what password hashing algorithm to use for the LaunchBarkly App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "start": "node server.js"
   },
   "type": "module",
   "author": "",
@@ -13,9 +14,9 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "launchdarkly-node-server-sdk": "^5.13.4",
+    "launchdarkly-node-server-sdk": "^5.13.4"
   },
   "engines":{
-    "node": "13.x"
+    "node": ">13.0.0"
   }
 }
