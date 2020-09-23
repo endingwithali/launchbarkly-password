@@ -24,7 +24,7 @@ ldClient.once("ready", () => {
                 
                 res.json({type: 'bcrypt'})
             } else {
-                res.json({type: 'pbkdf2'})
+                res.json({type: 'sha256'})
             }
         });
     })
