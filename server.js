@@ -17,12 +17,14 @@ ldClient.once("ready", () => {
      * 
      */
     app.get('/', function(req, res){
+        res.setHeader('Content-Type', 'application/json');
         ldClient.variation("launchbarkly", {"key": "server"}, false,
         (err, showFeature) => {
             if (showFeature) {
-                res.send('bcrypt')
+                
+                res.json({type: 'bcrypt'})
             } else {
-                res.send('pbkdf2')
+                res.json({type: 'pbkdf2'})
             }
         });
     })
